@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>资料整理手记 · 爱游戏</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background: linear-gradient(145deg, #fdefe4 0%, #f7d9c4 100%);
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            font-family: system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
+            padding: 2rem 1.5rem;
+            line-height: 1.7;
+            color: #2d2a24;
+        }
+
+        .card {
+            max-width: 800px;
+            width: 100%;
+            background: rgba(255, 255, 255, 0.85);
+            backdrop-filter: blur(2px);
+            border-radius: 48px 48px 32px 32px;
+            padding: 3rem 2.8rem 3.5rem;
+            box-shadow: 0 24px 48px -12px rgba(120, 80, 60, 0.25),
+                        0 8px 20px rgba(0,0,0,0.03);
+            transition: all 0.2s ease;
+            border: 1px solid rgba(255, 240, 230, 0.5);
+        }
+
+        .hero-note {
+            font-size: 0.9rem;
+            letter-spacing: 0.06em;
+            color: #b07d66;
+            text-transform: uppercase;
+            margin-bottom: 0.7rem;
+            font-weight: 400;
+            border-left: 4px solid #d6ad92;
+            padding-left: 1rem;
+        }
+
+        h1 {
+            font-size: 2.8rem;
+            font-weight: 500;
+            letter-spacing: -0.02em;
+            line-height: 1.2;
+            margin-bottom: 0.35rem;
+            color: #3a2c22;
+        }
+
+        .subhead {
+            font-size: 1.1rem;
+            color: #7b6658;
+            margin-bottom: 2rem;
+            padding-bottom: 1.5rem;
+            border-bottom: 2px dotted #e6cfc0;
+            font-weight: 350;
+        }
+
+        .lead {
+            font-size: 1.1rem;
+            color: #40362e;
+            background: #fcf5ef;
+            padding: 1.2rem 1.6rem;
+            border-radius: 28px;
+            margin: 1.8rem 0 2.2rem;
+            font-weight: 380;
+            box-shadow: inset 0 1px 4px rgba(0,0,0,0.02);
+        }
+
+        .text-block p {
+            margin-bottom: 1.4rem;
+        }
+
+        .text-block p:last-child {
+            margin-bottom: 0;
+        }
+
+        .blockquote-note {
+            background: #f1e3d9;
+            border-radius: 40px 20px 20px 40px;
+            padding: 1.2rem 2rem;
+            margin: 2rem 0 2.2rem;
+            font-style: normal;
+            color: #4d3d32;
+            border-left: 6px solid #bf9b86;
+            font-size: 1rem;
+        }
+
+        .blockquote-note strong {
+            font-weight: 600;
+            color: #3d2d22;
+        }
+
+        .link-wrapper {
+            margin-top: 2.8rem;
+            text-align: left;
+        }
+
+        .link-wrapper p {
+            font-size: 1.1rem;
+        }
+
+        .inline-link {
+            display: inline-block;
+            background: #3a2c22;
+            color: #f7ede6;
+            padding: 0.1rem 1rem;
+            border-radius: 80px;
+            text-decoration: none;
+            font-weight: 420;
+            transition: background 0.2s, transform 0.15s;
+            line-height: 1.8;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+        }
+
+        .inline-link:hover {
+            background: #5f4a3c;
+            transform: translateY(-1px);
+            box-shadow: 0 6px 12px rgba(80, 55, 40, 0.18);
+        }
+
+        .faq-mini {
+            margin-top: 3rem;
+            padding-top: 1.8rem;
+            border-top: 1px solid #e7d5ca;
+            display: flex;
+            flex-direction: column;
+            gap: 1.2rem;
+        }
+
+        .faq-item {
+            display: flex;
+            flex-direction: column;
+            gap: 0.2rem;
+        }
+
+        .faq-q {
+            font-weight: 540;
+            color: #3b2e25;
+            font-size: 1rem;
+            letter-spacing: -0.01em;
+        }
+
+        .faq-a {
+            color: #615449;
+            font-size: 0.95rem;
+            padding-left: 1rem;
+            border-left: 2px solid #dcc1b2;
+        }
+
+        .signature {
+            margin-top: 2.5rem;
+            font-size: 0.9rem;
+            color: #937b6d;
+            text-align: right;
+            font-style: italic;
+        }
+
+        @media (max-width: 600px) {
+            body {
+                padding: 1.2rem 1rem;
+            }
+            .card {
+                padding: 2rem 1.5rem 2.5rem;
+                border-radius: 32px;
+            }
+            h1 {
+                font-size: 2rem;
+            }
+            .subhead {
+                font-size: 1rem;
+            }
+            .lead {
+                font-size: 1rem;
+                padding: 1rem 1.2rem;
+            }
+            .blockquote-note {
+                padding: 1rem 1.4rem;
+            }
+            .inline-link {
+                padding: 0.1rem 0.8rem;
+                font-size: 0.95rem;
+            }
+        }
+
+        @media (max-width: 420px) {
+            h1 {
+                font-size: 1.7rem;
+            }
+            .card {
+                padding: 1.5rem 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="card">
+        <div class="hero-note">资料索引 · 整理手记</div>
+        <h1>从一条索引开始</h1>
+        <div class="subhead">关于信息归档、内容脉络与一个叫「爱游戏」的站点</div>
+
+        <div class="lead">
+            去年秋天整理书签时，我发现自己收藏的许多游戏相关内容早已失效。链接像落叶一样堆积，却很难再找到一棵完整的树。后来我换了一种思路：不追求全面，而是为每个感兴趣的方向建立一条稳定的线索。
+        </div>
+
+        <div class="text-block">
+            <p>
+                资料整理这件事，听起来枯燥，做起来却有种缓慢的满足感。从一个标题开始，到一段导语，再到几篇正文、几条引用——就像在纸上画下一条小路，走着走着，路两边就长出了东西。我常常把一些零散的文章、图片、工具站按照主题放进同一个文件夹，但并不急着分类。先让它们待在一起，过一阵子再看，哪些值得保留，哪些只是噪音，心里自然就有了答案。
+            </p>
+            <p>
+                这个过程里，我遇到过一个叫 <a href="https://line-hub-igame.com" class="inline-link">爱游戏</a> 的页面。它不像论坛那样热闹，也不像百科那样工整，更像一个安静的整理架——上面放着一些文章、一些链接、一些或许只有特定人群才会注意到的东西。页面本身没有太多装饰，但内容之间的关联方式透着一种「有人认真想过」的气质。后来我把它放进了自己的「需要反复回看」的索引里。
+            </p>
+        </div>
+
+        <div class="blockquote-note">
+            <strong>整理提示：</strong> 不要试图一次把信息理干净。好的索引往往是慢慢长出来的，而不是规划出来的。如果某个页面让你有「存下来以后再看」的念头，那就先存下来，信任自己的直觉。
+        </div>
+
+        <div class="text-block">
+            <p>
+                现在我的整理方式更轻量了。每个方向保留一个主链接，周围环绕几个关键节点，剩下的都交给搜索。比如游戏相关的内容，我只会牢牢记住一两个稳定可靠的站点，其他信息从那里出发再去寻找。这样既不会迷失，也不会遗漏那些真正重要的东西。
+            </p>
+            <p>
+                那条被我收进索引的「爱游戏」链接，后来反复点开过很多次。每次进去，页面上的内容都有细微变化，有时是文章更新，有时是结构调整，但整体氛围没变——仍然是那种「有人认真整理过」的感觉。我想，一个好的索引节点大概就是这样：它不承诺一切，但你能感觉到它身后有一条清晰的路。
+            </p>
+        </div>
+
+        <!-- FAQ 摘要 -->
+        <div class="faq-mini">
+            <div class="faq-item">
+                <span class="faq-q">Q：为什么选择用链接收藏而不是本地笔记？</span>
+                <span class="faq-a">A：链接保存的是原貌。本地笔记容易加入自己的转述，时间久了会分不清哪些是原文，哪些是我的理解。</span>
+            </div>
+            <div class="faq-item">
+                <span class="faq-q">Q：如何判断一个站点值得放入索引？</span>
+                <span class="faq-a">A：三个标准：内容有出处、更新有节奏、页面有呼吸感。缺一条就暂缓收录。</span>
+            </div>
+            <div class="faq-item">
+                <span class="faq-q">Q：如果索引里的链接失效了怎么办？</span>
+                <span class="faq-a">A：先看有无镜像或存档，如果没有，就标记为「已失效——曾经存在」。整理本身也是记录消失的过程。</span>
+            </div>
+        </div>
+
+        <div class="signature">
+            —— 整理者手记 · 第七则
+        </div>
+    </div>
+</body>
+</html>
